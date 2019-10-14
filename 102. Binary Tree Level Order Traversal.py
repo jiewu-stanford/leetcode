@@ -3,11 +3,11 @@ Title     : 102. Binary Tree Level Order Traversal
 Problem   : https://leetcode.com/problems/binary-tree-level-order-traversal/
 '''
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 '''
 many solutions: DFS recursive, DFS iterative + stack, BFS iterative + queue
 Reference: https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/33731/Python-short-dfs-solution

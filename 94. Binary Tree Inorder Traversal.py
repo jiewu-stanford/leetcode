@@ -3,11 +3,11 @@ Title     : 94. Binary Tree Inorder Traversal
 Problem   : https://leetcode.com/problems/binary-tree-inorder-traversal/
 '''
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 '''
 recursive solution, compare with the 144. preorder traversal
 Reference: https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/31381/Python-recursive-and-iterative-solutions
@@ -24,10 +24,10 @@ class Solution:
             res.append(root.val)
             self.helper(root.right, res)
 
-''' iterative solution, compare with the 144. preorder traversal, ibid. '''
+''' iterative solution with stack, compare with the 144. preorder traversal, ibid. '''
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
-        if root == None: return []
+        if not root: return []
         stack, res = [], []   # stack, res = [root], [] for preorder
         while True:
             while root:
@@ -39,12 +39,12 @@ class Solution:
             res.append(node.val)
             root = node.right
 '''
-an alternative implementation, assign root to a variable node
+an alternative implementation of stack, assign root to a variable node
 Reference: https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/31350/Easy-to-understand-Python-code-beats-96.42-Python-submissions
 '''
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
-        if root == None: return []
+        if not root: return []
         stack, res = [root], []
         node = root
         while stack:

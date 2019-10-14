@@ -3,11 +3,11 @@ Title     : 145. Binary Tree Postorder Traversal
 Problem   : https://leetcode.com/problems/binary-tree-postorder-traversal/
 '''
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 '''
 recursive solution, compare with the 144. preorder traversal
 Reference: https://leetcode.com/problems/binary-tree-postorder-traversal/discuss/45786/Python-recursive-and-iterative-solutions

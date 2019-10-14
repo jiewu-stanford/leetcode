@@ -3,11 +3,11 @@ Title     : 144. Binary Tree Preorder Traversal
 Problem   : https://leetcode.com/problems/binary-tree-preorder-traversal/
 '''
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 '''
 recursive solution
 Reference: https://leetcode.com/problems/binary-tree-preorder-traversal/discuss/45290/Python-solutions-(recursively-and-iteratively)

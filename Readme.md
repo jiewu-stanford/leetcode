@@ -69,6 +69,7 @@ curr = current \
 prev = previous \
 acc = accumulated \
 cum = cumulative \
+comb = combination \
 dif = difference \
 rem = remaining \
 rev = reverse \

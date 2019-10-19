@@ -50,17 +50,20 @@ In this way although your coding skills may not improve dramatically within 2 mo
 
 <h3>List of abbreviations used to name variables are:</h3>
 
+2 in between alphabets means conversion to -> \
 d = dictionary \
 dp = default variable for dynamic programming \
 indx = index \
 ni = new i \
 nj = new j \
+ox = old x \
+oy = old y \
 l = left \
 r = right \
 pos = position \
-r = number of rows (sometimes the full 'rows' are used) \
-c = number of columns (sometimes the full 'cols' are used) \
-c = character \
+r = number of rows (the full 'rows' are used when r is used to represent right) \
+c = number of columns (the full 'cols' are used when c is used to represent character) \
+c = character (in string or word) \
 s = string \
 arr = array \
 dir = direction \

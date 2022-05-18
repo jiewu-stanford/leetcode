@@ -17,7 +17,7 @@ class Solution:
         res, heights = 0, [0]*(c+1)
         for row in matrix:
             for i in range(c):
-                heights[i] = heights[i] + 1 if row[i] == '1' else 0   # height reset to 0 if it is '0' in the above row i.e. consecutive '1's terminated
+                heights[i] = heights[i] + 1 if row[i] == '1' else 0   # height reset to 0 if it is '0' i.e. consecutive '1's terminated
             # the following is copied from the 84. solution
             stack = [-1]
             for i in range(c+1):

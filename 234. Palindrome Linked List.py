@@ -26,12 +26,11 @@ from collections import deque
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
         queue = deque([])
-        curr = head
-        while curr:
-            queue.append(curr)
-            curr = curr.next
+        while head:
+            queue.append(head.val)
+            head = head.next
         while len(queue) >= 2:
-            if queue.popleft().val != queue.pop().val:
+            if queue.popleft() != queue.pop():
                 return False
         return True
 '''

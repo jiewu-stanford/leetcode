@@ -40,7 +40,7 @@ Reference: https://leetcode.com/problems/merge-k-sorted-lists/discuss/183195/Pyt
 import heapq
 class Solution:
     def mergeKLists(self, lists):
-        res, heap = [], []
+        heap = []
         heapq.heapify(heap)
         count = 0   # to distinguish different nodes with the same value
         for i in range(len(lists)):

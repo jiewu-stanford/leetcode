@@ -13,7 +13,7 @@ class Solution:
             mid = (l + r) // 2
             if nums[mid-1] < nums[mid] > nums[mid+1]:
                 return mid
-            elif nums[mid] < nums[mid+1]:
+            elif nums[mid] <= nums[mid+1]:
                 l = mid + 1
             else:
                 r = mid - 1

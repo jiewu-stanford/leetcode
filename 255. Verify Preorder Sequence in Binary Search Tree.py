@@ -21,3 +21,21 @@ class Solution:
             i += 1
             preorder[i] = val
         return True
+'''
+DFS helper function divide-and-conquer narrowing [min, max] value range recursively
+Reference: https://www.lintcode.com/problem/1307/solution/36890
+'''
+class Solution:
+    def verifyPreorder(self, preorder):
+        idx = 0
+        def helper(mmin, mmax):
+            nonlocal idx
+            if idx == len(preorder):
+                return True
+            val = preorder[idx]
+            if not mmin < val < mmax:
+                return False
+            idx += 1
+            return helper(mmin, val) or helper(val, mmax)
+
+        return helper(float('-inf'), float('inf'))

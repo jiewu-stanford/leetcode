@@ -42,7 +42,7 @@ class Solution:
         shortest = float('inf')
         for i in range(r):
             for j in range(c):
-                if dists[i][j] < shortest and counts[i][j] == count:
-                    shortest = dists[i][j]
+                if counts[i][j] == count:
+                    shortest = min(shortest, dists[i][j])
 
         return shortest if shortest != float('inf') else -1

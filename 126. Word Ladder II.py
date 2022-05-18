@@ -63,20 +63,16 @@ import collections
 class Solution(object):
     def findLadders(self, beginWord, endWord, wordList):
         if endWord not in wordList: return []
-        words, n = set(wordList), len(beginWord)
-        res, seq = [], {}
-        seq[beginWord] = [[beginWord]]   # key = destination, val = all paths to the destination
+        words, seq = set(wordList), {}
+        seq[beginWord] = [[beginWord]]  # key = destination, val = all paths to the destination
         while seq:
             newseq = collections.defaultdict(list)
             for word in seq:
                 if word == endWord:
                     return seq[word]
                 else:
-                    for i in range(n):
-                        for c in 'qwertyuiopasdfghjklzxcvbnm':
-                            newWord = word[:i] + c + word[i+1:]
-                            if newWord in words:
-                                newseq[newWord] += [path + [newWord] for path in seq[word]]
+                    for w in [word[:i]+c+word[i+1:] for i in range(len(word)) for c in 'qwertyuiopasdfghjklzxcvbnm']:
+                        if w in words:
+                            newseq[w] += [path + [w] for path in seq[word]]
             words -= set(newseq.keys())
             seq = newseq
-        return res

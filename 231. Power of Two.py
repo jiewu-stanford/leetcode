@@ -1,6 +1,6 @@
 '''
 Title     : 231. Power of Two
-Problem   : https://leetcode.com/problems/super-pow/
+Problem   : https://leetcode.com/problems/power-of-two/
 '''
 '''
 bit manipulation: a power of n has a binary representation n = 100...00, thus n - 1 = 011...11 and their bitwise AND yield 000...00

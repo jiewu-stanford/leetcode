@@ -8,7 +8,7 @@ Reference: https://leetcode.com/problems/game-of-life/discuss/73229/Python-solut
 '''
 import itertools
 class Solution:
-    """ 0 = now dead and -> head,   1 = now live and -> live,   2 = now dead but -> live,   3 = now live but -> dead """
+    """ 0 = now dead and -> dead,   1 = now live and -> live,   2 = now dead but -> live,   3 = now live but -> dead """
     def gameOfLife(self, board: List[List[int]]) -> None:
         rows, cols = len(board), len(board[0])
 

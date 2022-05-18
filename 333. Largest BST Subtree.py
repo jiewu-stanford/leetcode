@@ -1,7 +1,7 @@
 '''
 Title     : 333. Largest BST Subtree ($$$)
 Problem   : https://leetcode.com/problems/largest-bst-subtree/description/
-          : https://www.lintcode.com/problem/verify-preorder-sequence-in-binary-search-tree/description
+          : https://www.lintcode.com/problem/910/
 '''
 '''
 iterative solution adapting the 98. solution to check whether it is a valid BST

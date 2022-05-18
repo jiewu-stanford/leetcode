@@ -20,9 +20,9 @@ class Twitter(object):
         for Id in self.following[userId] | {userId}:   # union to include the user him/herself
             for t in self.tweets[Id]:
                 tmp.append(t)
-        tw = sorted(tmp)[:10]
+        feeds = sorted(tmp)[:10]
         # one-liner: tw = sorted(t for Id in self.following[userId] | {userId} for t in self.tweets[Id])[:10]
-        return [news for _, news in tw]
+        return [news for _, news in feeds]
 
     def follow(self, followerId, followeeId):
         self.following[followerId].add(followeeId)

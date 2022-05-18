@@ -22,5 +22,5 @@ class Solution:
                     dp[i][j] = 1 + min(dp[i-1][j], dp[i-1][j-1], dp[i][j-1])
                     # 1 represents insert operation word1[:i-1] --> word1[:i] thus relates dp[i][j] to dp[i-1][j]
                     #              replace operation word1[i] --> word2[j] thus relates dp[i][j] to dp[i-1][j-1]
-                    #              delete operation word2[:j] --> word2[:j-1] thus relates dp[i][j] to dp[i][j-1]
+                    #              insert operation word2[:j-1] --> word2[:j] thus relates dp[i][j] to dp[i][j-1]
         return dp[l1][l2]

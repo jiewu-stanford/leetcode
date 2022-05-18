@@ -9,7 +9,8 @@ Reference: https://leetcode.com/problems/number-of-islands/discuss/56622/Python-
 class Solution(object):
     def numIslands(self, grid):
         if not grid: return 0
-        r, c, count = len(grid), len(grid[0]), 0
+        count = 0
+        r, c = len(grid), len(grid[0])
         visited = [[False]*c for _ in range(r)]
         for i in range(r):
             for j in range(c):
@@ -22,10 +23,9 @@ class Solution(object):
         if not (0 <= i < len(grid)) or not (0 <= j < len(grid[0])) \
             or grid[i][j] == '0' or visited[i][j]: return
         visited[i][j] = True
-        self.dfs(grid, i+1, j, visited)
-        self.dfs(grid, i-1, j, visited)
-        self.dfs(grid, i, j+1, visited)
-        self.dfs(grid, i, j-1, visited)
+        directions = [(0,1), (0,-1), (-1,0), (1,0)]
+        for d in directions:
+            self.dfs(grid, i+d[0], j+d[1], visited)
 '''
 BFS helper function using deque(), instead of maintaining a visited record modify directly on the grid
 Reference: https://leetcode.com/problems/number-of-islands/discuss/121164/Python-BFS-and-DFS-solution

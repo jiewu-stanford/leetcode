@@ -15,7 +15,7 @@ class Solution:
             if val == target and startindex == len(num):
                 res.append(expr)
                 return
-            if startindex < len(num) and max(1,abs(prev))*(int(num[startindex:])) < abs(target-val):   # target not reachable
+            # if startindex < len(num) and max(1,abs(prev))*(int(num[startindex:])) < abs(target-val):   # target not reachable
                 return
             for i in range(startindex, len(num)):
                 curr = num[startindex:i+1]

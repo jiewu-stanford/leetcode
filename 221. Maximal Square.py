@@ -11,7 +11,7 @@ class Solution:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
         if not matrix: return 0
         r, c = len(matrix), len(matrix[0])
-        dp = [[0 if matrix[i][j] == '0' else 1 for j in range(0,c)] for i in range(0,r)]
+        dp = [[0 if matrix[i][j] == '0' else 1 for j in range(c)] for i in range(r)]
         for i in range(1, r):
             for j in range(1, c):
                 if matrix[i][j] == '1':

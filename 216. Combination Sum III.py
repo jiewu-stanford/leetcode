@@ -17,6 +17,7 @@ class Solution:
             return
         elif k == 0 and target == 0:
             res.append(acc)
+            return
         else:
             for i in range(startindex, len(nums)):
                 self.helper(nums, k-1, target-nums[i], i+1, acc+[nums[i]], res)

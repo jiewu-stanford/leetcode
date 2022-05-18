@@ -25,7 +25,7 @@ class Solution(object):
         right = self.sortList(second)
         return self.merge(left, right)
 
-    def merge(self, l1, l2):
+    def merge(self, l1, l2):    # 21. solution
         if None in (l1, l2): return l1 or l2
         dummy = curr = ListNode(0)
         while l1 and l2:

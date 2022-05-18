@@ -45,6 +45,6 @@ class Solution(object):
                     fast = fast.next
                 last.next = None
                 return slow
-        else:
+        else: 
             last.next = None   # without this the OJ would produce 'linked structure was modified' arror
             return None

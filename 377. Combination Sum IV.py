@@ -3,7 +3,7 @@ Title     : 377. Combination Sum IV
 Problem   : https://leetcode.com/problems/combination-sum-iv/
 '''
 '''
-recursive solution adapted from the 77. solution, the only difference is that startindex = 0 always, albeit TLE
+recursive solution adapted from the 39. solution, the only difference is that startindex = 0 always, albeit TLE
 Reference: https://leetcode.com/problems/combination-sum-iv/discuss/85145/Python-DP-and-DFS-Solution
 '''
 class Solution:

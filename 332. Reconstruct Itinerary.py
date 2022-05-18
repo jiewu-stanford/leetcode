@@ -41,6 +41,6 @@ class Solution(object):
         route, stack = [], ['JFK']
         while stack:
             while d[stack[-1]]:
-                stack += d[stack[-1]].pop(),
-            route += stack.pop(),
+                stack.append(d[stack[-1]].pop())
+            route.append(stack.pop())
         return route[::-1]

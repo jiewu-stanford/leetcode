@@ -155,3 +155,21 @@ class Solution:
         smaller = [0] * len(nums)
         mergesort(list(enumerate(nums)))
         return smaller
+''' work only on the index, ibid. '''
+class Solution:
+    def countSmaller(self, nums: List[int]) -> List[int]:
+        def sort(inds):
+            half = len(inds) // 2
+            if half:
+                left, right = sort(inds[:half]), sort(inds[half:])
+                for i in range(len(inds))[::-1]:
+                    if not right or left and nums[left[-1]] > nums[right[-1]]:
+                        smaller[left[-1]] += len(right)
+                        inds[i] = left.pop()
+                    else:
+                        inds[i] = right.pop()
+            return inds
+
+        smaller = [0]*len(nums)
+        sort(list(range(len(nums))))
+        return smaller

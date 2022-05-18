@@ -13,7 +13,7 @@ class Solution:
         if n == 0: return 0
         elif n == 1: return k
         sameColor, diffColor = k, k*(k-1)   # for n == 2
-        for i in range(2, n):
+        for _ in range(2, n):
             tmp = diffColor
             diffColor = (sameColor + diffColor) * (k-1)
             sameColor = tmp

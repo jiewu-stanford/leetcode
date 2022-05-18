@@ -13,8 +13,9 @@ class Solution:
         return self.helper(pattern, str, w2p, p2w)
     
     def helper(self, pattern, s, w2p, p2w):
-        if not pattern and not s: return True
-        if (not pattern and s) or (pattern and not s): return False
+        if not pattern and not str: return True
+        elif not pattern and str: return False
+        elif pattern and not str: return False
         p = pattern[0]
         for j in range(len(s)):
             w = s[:j+1]
@@ -23,7 +24,7 @@ class Solution:
                 if self.helper(pattern[1:], s[j+1:], w2p, p2w):
                     return True
                 else:
-                    del w2p[w]; del p2w[p]   # delete the wrong guess
+                    del w2p[w], p2w[p]   # delete the wrong guess
             elif p in p2w and w == p2w[p]:
                 if self.helper(pattern[1:], s[j+1:], w2p, p2w):
                     return True

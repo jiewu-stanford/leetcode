@@ -67,6 +67,7 @@ class Solution(object):
 '''
 iterative solution without using helper function, two passes explicitly spelling out the helper function steps
 Reference: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/discuss/14706/Beats-100-Python-submission
+checked: can only detect two instances
 '''
 class Solution(object):
     def searchRange(self, nums, target):
